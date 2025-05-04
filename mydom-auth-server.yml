@@ -2,6 +2,9 @@ server:
   port: 8081
 
 spring:
+  main:
+    banner-mode: console ##(console, log, off)
+
   security:
     oauth2:
       resourceserver:
@@ -15,11 +18,15 @@ spring:
     driver-class-name: oracle.jdbc.OracleDriver
   jpa:
     hibernate:
-      ddl-auto: update
-    show-sql: true
+      ddl-auto: update  ##(create, create-drop, validate, update)
+    show-sql: false
     properties:
       hibernate:
-        dialect: org.hibernate.dialect.Oracle12cDialect
+        dialect: oracle.jdbc.OracleDriver #(org.hibernate.dialect.OracleSqlAstDialect, org.hibernate.dialect.OracleDialect, org.hibernate.dialect.Oracle12Dialect, org.hibernate.dialect.Oracle12cDialect)
+        format_sql: true
+        jdbc:
+          lob:
+            non_contextual_creation: true
         
 logging:
   level:
