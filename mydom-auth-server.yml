@@ -28,6 +28,6 @@ spring:
           lob:
             non_contextual_creation: true
         
-logging:
-  level:
-    org.springframework.security: DEBUG
+# logging:
+#   level:
+#     org.springframework.security: DEBUG
