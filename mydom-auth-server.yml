@@ -2,8 +2,6 @@ server:
   port: 8081
 
 spring:
-  config:
-    import: "configserver:"
   main:
     banner-mode: console ##(console, log, off)
 
