@@ -1,0 +1,17 @@
+# server:
+#   port: 8888
+
+spring:
+  main:
+    allow-bean-definition-overriding: true
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+
+logging:
+  level:
+    root: INFO
+    com.mariapuri.mydom.config: DEBUG
