@@ -1,1 +1,1 @@
-# mydom-config-server
+# mydom-config-repo
